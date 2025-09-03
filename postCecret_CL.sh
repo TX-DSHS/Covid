@@ -115,9 +115,12 @@ rm -f "${basedir}/cecret_runs/zip_files/postCecret_${run_name}.zip"
 # Zip results
 echo "Zipping postCecretPipeline output files..."
 zip -rj "${basedir}/cecret_runs/zip_files/postCecret_${run_name}" "${run_dir}/${run_name}"*
+zip -r "${basedir}/cecret_runs/zip_files/${run_name}" "${run_dir}/"
 
 # Upload to S3
 echo "Uploading to AWS S3..."
+aws s3 cp "${basedir}/cecret_runs/zip_files/${run_name}.zip" \
+    "${aws_bucket}/cecret_runs/zip_files/${run_name}.zip"    
 aws s3 cp "${basedir}/cecret_runs/zip_files/postCecret_${run_name}.zip" \
     "${aws_bucket}/cecret_runs/zip_files/postCecret_${run_name}.zip"
 
