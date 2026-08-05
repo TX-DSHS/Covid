@@ -5,7 +5,7 @@ https://github.com/UPHL-BioNGS/Cecret
 ## The pipeline can be installed in /bioinformatics/ partition of AWS EC2 by:
 
 ```bash
-git clone https://github.com/TX-DSHS/Covid_pipeline.git
+git clone https://github.com/TX-DSHS/Covid.git
 
 # If seeing CRLF error
 git config core.autocrlf false
@@ -29,7 +29,7 @@ Miniconda3 will now be installed into this location:
   - Press CTRL-C to abort the installation
   - Or specify a different location below
 
-[/home/dnalab/miniconda3] >>> /bioinformatics/Covid_pipeline/miniconda3
+[/home/dnalab/miniconda3] >>> /bioinformatics/Covid/miniconda3
 
 ```bash
 rm Miniconda3.sh
@@ -37,7 +37,7 @@ rm Miniconda3.sh
 
 ## Create a conda environment installing Singularity and nextflow:
 ```bash
-source /bioinformatics/Covid_pipeline/miniconda3/etc/profile.d/conda.sh
+source /bioinformatics/Covid/miniconda3/etc/profile.d/conda.sh
 conda create -n nextflow -c conda-forge -c bioconda \
    nextflow pandas
 ```
