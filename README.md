@@ -45,10 +45,10 @@ conda create -n covid -c conda-forge -c bioconda \
 ## To run Covid pipeline:
 ```bash
 # For Illumina runs
-bash run_Cecret_Miseq.sh <run_name>
+bash runCecret_Miseq.sh <run_name>
 
 # For Clear Labs runs
-bash run_Cecret_CL.sh <run_name>
+bash runCecret_CL.sh <run_name>
 
 ```
 ## To submit passed samples from a completed run:
