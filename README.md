@@ -38,7 +38,7 @@ rm Miniconda3.sh
 ## Create a conda environment installing Singularity and nextflow:
 ```bash
 source /bioinformatics/Covid/miniconda3/etc/profile.d/conda.sh
-conda create -n nextflow -c conda-forge -c bioconda \
+conda create -n covid -c conda-forge -c bioconda \
    nextflow pandas
 ```
 
